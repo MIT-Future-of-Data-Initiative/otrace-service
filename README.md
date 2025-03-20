@@ -9,6 +9,9 @@ data sets, technical specifications, code implementations, and relevant
 policies, to aid in the exploration of accountability and traceability in the
 open banking ecosystem.
 
+**March 2025 Update:** The OTrace Team is currently working on creating an updated specification for the service. There are a couple of sandboxes
+for initial exploration that are evolving with time. There is an [OTrace web application](https://github.com/farooqashar/otrace-web) to demonstate various concepts in the updated protocol. There is an [OTrace API](https://github.com/farooqashar/otrace-v1) with various endpoints for different features. Note that the work is evolving and changing rapidly.
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -65,10 +68,10 @@ boundaries. Traceability will help achieve reliable, scalable detection of data
 misuse, leading to both better internal processes and more effective
 intervention by enforcement authorities when necessary.
 
-The main participants in the open banking ecosystem are:  
+The main participants in the open banking ecosystem are:
 
-1. *Consumers.* Individuals who want to use digital financial services.  
-2. *Data providers.* Companies (e.g., traditional banks, payment providers, credit card providers) that hold consumer financial data.  
+1. *Consumers.* Individuals who want to use digital financial services.
+2. *Data providers.* Companies (e.g., traditional banks, payment providers, credit card providers) that hold consumer financial data.
 3. *Data recipients.* Companies (e.g., fintechs, payment processors, credit. reference agencies, regulators) that use consumer financial data to provide requested services.
 4. *Data access platforms.* Intermediaries (e.g., API providers, data
    aggregators) that support data exchange between data providers and data
@@ -99,7 +102,7 @@ These traceability services will record various types of traceability *attestati
 4. *Rights attestations.* These describe actions associated with data rights
    requests, such as consent grant, consent revocation, data access, data
    correction, and data deletion.
-   
+
 A traceability protocol is comprised of several subprotocols:
 
 1. *Traceability setup.* This is a three-party protocol, involving a consumer,
@@ -133,7 +136,7 @@ A traceability protocol is comprised of several subprotocols:
 ## Getting started
 
 #### Prepare
-To set up the project, first install the [Go programming language](https://go.dev/doc/install). Then 
+To set up the project, first install the [Go programming language](https://go.dev/doc/install). Then
 
 #### Structure
 This project is a RESTful web service API with Go and the [Gin Web Framework](https://gin-gonic.com/docs/)
@@ -141,7 +144,7 @@ This project is a RESTful web service API with Go and the [Gin Web Framework](ht
 2. models - Data Transfer Objects, Data Access Objects
 3. utils - utility functions
 4. config - configuration
-5. tests - unit and integration tests 
+5. tests - unit and integration tests
 
 ####  Developing and Deploying on Cloud
 Create AWS account, free tier will be sufficient. Install [Serverless Framework](https://www.serverless.com/framework/docs-getting-started) And configure your AWS Credentials for serverless.

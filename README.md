@@ -134,7 +134,7 @@ A traceability protocol is comprised of several subprotocols:
 ### Documents
 **Github Page** README.md is the index page. New pages shall be written in markdown file under docs folder. Make sure to add the new md file to `_config.yml #include section`, e.g. `- docs/contact_page.md`, and add a hyperlink in README.md to it, e.g. `[Contact Page](docs/contact_page.html)` **Attention** It has to be .html suffix in the hyperlink. Github Page will automatically convert *.md* file to *.html* file
 
-**Spec Update:** The API specification is located at `docs/spec.yaml`. Recommend to use Open API Editor [StopLight Studio](https://github.com/stoplightio/studio/releases) to make changes. When finish editing, run `./compile-spec.sh` which will compile the yaml file and produce a zero dependency static HTML file named `spec.html` in docs folder, which will be used in Github Page. Make sure to checkin both `spec.yaml` and `spec.html` file to Github repo.
+**Spec Update:** The API specification is located at `docs/spec.json`. Recommend to use Open API Editor [StopLight Studio](https://github.com/stoplightio/studio/releases) to make changes and grab the openapi json file of the updated specification. When finish editing, run `./compile-spec.sh` which will compile the json file and produce a zero dependency static HTML file named `spec.html` in docs folder, which will be used in Github Page. Make sure to checkin both `spec.json` and `spec.html` file to Github repo.
 
 
 ## Implementations

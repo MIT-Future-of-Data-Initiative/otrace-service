@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-echo "Getting started to compile spec"
+echo "Starting Redoc compilation from spec.json..."
 
-# Bundle docs into zero-dependency HTML file
-npx redoc-cli bundle docs/spec.yaml && \
-mv redoc-static.html docs/spec.html && \
-echo "Changed name from redoc-static.html to spec.html and moved to docs folder" && \
-echo -e "\nDone!"
+# Path to your JSON spec
+SPEC_PATH="docs/spec.json"
+OUTPUT_HTML="docs/spec.html"
+
+# Generate Redoc HTML from JSON
+npx redoc-cli bundle "$SPEC_PATH" --output "$OUTPUT_HTML" && \
+echo "Generated $OUTPUT_HTML from $SPEC_PATH" && \
+echo -e "\n✅ Done!"

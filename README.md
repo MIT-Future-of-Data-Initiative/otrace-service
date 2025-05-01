@@ -137,7 +137,7 @@ A traceability protocol is comprised of several subprotocols:
 **Spec Update:** The API specification is located at `docs/spec.yaml`. Recommend to use Open API Editor [StopLight Studio](https://github.com/stoplightio/studio/releases) to make changes. When finish editing, run `./compile-spec.sh` which will compile the yaml file and produce a zero dependency static HTML file named `spec.html` in docs folder, which will be used in Github Page. Make sure to checkin both `spec.yaml` and `spec.html` file to Github repo.
 
 
-## Different Implementations
+## Implementations
 
 The `backend` folder contains the source code for the earlier iterations of the OTrace protocol. Refer to the `README.md` within the `backend` folder for further details. The `backend_v0_5` folder contains the source code for the current iteration of the OTrace protocol. Refer to the `README.md` within the `backend_v0_5` folder for further details.
 

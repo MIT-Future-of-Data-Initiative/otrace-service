@@ -139,7 +139,7 @@ A traceability protocol is comprised of several subprotocols:
 
 ## Implementations
 
-The `backend` folder contains the source code for the earlier iterations of the OTrace protocol. Refer to the `README.md` within the `backend` folder for further details. The `backend_v0_5` folder contains the source code for the current iteration of the OTrace protocol. Refer to the `README.md` within the `backend_v0_5` folder for further details.
+The `backend` folder contains the API source code for the earlier iterations of the OTrace protocol. Refer to the `README.md` within the `backend` folder for further details. The `backend_v0_5` folder contains the API source code for the current iteration of the OTrace protocol. Refer to the `README.md` within the `backend_v0_5` folder for further details. The `frontend` folder contains the source code for the model web application for end-users of OTrace. Refer to the `README.md` within the `frontend` folder for further details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

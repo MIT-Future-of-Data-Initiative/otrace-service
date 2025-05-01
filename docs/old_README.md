@@ -9,13 +9,17 @@ data sets, technical specifications, code implementations, and relevant
 policies, to aid in the exploration of accountability and traceability in the
 open banking ecosystem.
 
+**March 2025 Update:** The OTrace Team is currently working on creating an updated specification for the service. There are a couple of sandboxes
+for initial exploration that are evolving with time. There is an [OTrace web application](https://github.com/farooqashar/otrace-web) to demonstate various concepts in the updated protocol. There is an [OTrace API](https://github.com/farooqashar/otrace-v1) with various endpoints for different features. Note that the work is evolving and changing rapidly.
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#what-is-open-banking">What is open banking?</a></li>
     <li><a href="#overview">Overview</a></li>
-   <li><a href="#usage">Usage</a></li>
-   <li><a href="#implementations">Different Implementations</a></li>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#building-on-the-sandbox">Building on the Sandbox</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -109,10 +113,10 @@ A traceability protocol is comprised of several subprotocols:
     data recipient) is an OAuth client and the traceability service acts as the
     authorization and resource servers.
 2. *Data sharing setup.* This is a four-party protocol, involving a consumer,
-	data provider, data recipient, and traceability service. The consumer
-	initiates data sharing between the provider and the recipient (e.g., using
-	the FDX protocol), and the recipient and provider both post consent records
-	to the traceability service.
+    data provider, data recipient, and traceability service. The consumer
+    initiates data sharing between the provider and the recipient (e.g., using
+    the FDX protocol), and the recipient and provider both post consent records
+    to the traceability service.
 3. *Data sharing.* This is a three-party protocol, involving a data provider,
    data recipient, and traceability service. The recipient requests data from the
    provider (e.g., using the FDX protocol), and receives the data and a "consentID"
@@ -129,6 +133,29 @@ A traceability protocol is comprised of several subprotocols:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Getting started
+
+#### Prepare
+To set up the project, first install the [Go programming language](https://go.dev/doc/install). Then
+
+#### Structure
+This project is a RESTful web service API with Go and the [Gin Web Framework](https://gin-gonic.com/docs/)
+1. handlers - API Handlers, API functions/business logic
+2. models - Data Transfer Objects, Data Access Objects
+3. utils - utility functions
+4. config - configuration
+5. tests - unit and integration tests
+
+####  Developing and Deploying on Cloud
+Create AWS account, free tier will be sufficient. Install [Serverless Framework](https://www.serverless.com/framework/docs-getting-started) And configure your AWS Credentials for serverless.
+1. Go to AWS Identity and Access Management (IAM) Service
+2. Create a new User in IAM, and grant AdministratorAccess
+3. Create Access Key for this User
+4. Open Terminal and go to /backend folder, and run this command `serverless config credentials --provider aws --key YOUR_ACCESS_KEY --secret YOUR_SECRET_KEY --profile YOUR_PROFILE_NAME`
+5. run `sls deploy`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Usage
 
 ### Documents
@@ -136,10 +163,15 @@ A traceability protocol is comprised of several subprotocols:
 
 **Spec Update:** The API specification is located at `docs/spec.yaml`. Recommend to use Open API Editor [StopLight Studio](https://github.com/stoplightio/studio/releases) to make changes. When finish editing, run `./compile-spec.sh` which will compile the yaml file and produce a zero dependency static HTML file named `spec.html` in docs folder, which will be used in Github Page. Make sure to checkin both `spec.yaml` and `spec.html` file to Github repo.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Different Implementations
+## Building on the Sandbox
 
-The `backend` folder contains the source code for the earlier iterations of the OTrace protocol. Refer to the `README.md` within the `backend` folder for further details. The `backend_v0_5` folder contains the source code for the current iteration of the OTrace protocol. Refer to the `README.md` within the `backend_v0_5` folder for further details.
+The code in this repository serves as a starting point, rather than a complete
+open banking implementation. This is because the research being conducted may
+require incorporating different technologies. Throughout the code, you will find
+comments labeled as `HOOK`, which indicate places you can plug in your own
+innovations and solutions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

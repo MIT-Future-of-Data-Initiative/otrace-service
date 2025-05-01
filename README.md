@@ -188,5 +188,6 @@ information.
 - Quinn Magendanz - [qpm3@mit.edu](mailto:qpm3@mit.edu)
 - Dean Wen - [dianwen@mit.edu](mailto:dianwen@mit.edu)˜
 - Daniel Weitzner - [weitzner@mit.edu](mailto:weitzner@mit.edu)
+- Ashar Farooq- [afarooq@mit.edu](mailto:afarooq@mit.edu)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -45,8 +45,11 @@ export default function LinkDemo() {
           <div key={idx} style={styles.emailCard}>
             <div style={styles.subjectLine}>❌ Loan Application Denied</div>
             <div style={styles.bodyText}>
+              {console.log("pair", pair)}
               <p>
-                Dear user, your recent loan application was <b>denied</b>.
+                Dear user, your recent loan application submitted to{" "}
+                {pair.usage.action.information.dataController} was <b>denied</b>
+                .
               </p>
               <p>
                 <a

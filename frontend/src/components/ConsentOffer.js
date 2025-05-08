@@ -89,10 +89,12 @@ const ConsentOffer = ({ role }) => {
 
   return (
     <Container>
-      <Typography variant="h5">Offering Consent</Typography>
+      <Typography variant="h5">
+        Requesting Terms of Proposed Data Usage
+      </Typography>
       <Typography variant="h7">
-        Fill out the following form to request consent from the consumer
-        regarding their data.
+        Fill out the following form to request a contract with certain
+        parameterized permission from the consumer regarding their data.
       </Typography>
       <form onSubmit={handleSubmit}>
         <TextField

@@ -13,6 +13,7 @@ import DataUse from "./components/DataUse";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Violations from "./components/Violations";
+import LinkDemo from "./components/LinkDemo";
 
 function App() {
   const { user, role } = useAuth();
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login/callback" element={<LoginCallback />} />
           <Route path="/about" element={<About />} />
+          <Route path="/linkdemo" element={<LinkDemo />} />
 
           {/* Role-protected routes */}
           <Route

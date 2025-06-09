@@ -65,7 +65,7 @@ const NavBar = () => {
         {(role === "data provider" || role === "data recipient") && (
           <>
             <Button color="inherit" onClick={() => navigate("/consent-offer")}>
-              Consent Offer
+              Contract Offer
             </Button>
             <Button color="inherit" onClick={() => navigate("/data-use")}>
               Data Use
